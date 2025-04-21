@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Just for You</title>
+  <style>
+    body {
+      background: linear-gradient(to right, #ff9a9e, #fad0c4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      min-height: 100vh;
+      font-family: 'Segoe UI', sans-serif;
+      color: #fff;
+      text-align: center;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+    .message {
+      background: rgba(255, 255, 255, 0.2);
+      padding: 20px 30px;
+      border-radius: 15px;
+      font-size: 1.4rem;
+      max-width: 80%;
+      margin-bottom: 20px;
+      transition: all 0.3s ease-in-out;
+    }
+    button {
+      padding: 10px 20px;
+      background-color: #fff;
+      color: #ff5e78;
+      border: none;
+      border-radius: 10px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    button:hover {
+      background-color: #ffe2e6;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Hey Love!</h1>
+  <div class="message" id="loveMessage">
+    Click the button to see a surprise message!
+  </div>
+  <button onclick="generateMessage()">Show Me Love</button>
+
+  <script>
+    const messages = [
+      "You light up my world like nobody else.",
+      "Every day with you is my favorite day.",
+      "You're my sunshine on a rainy day.",
+      "I love you more than words can say.",
+      "You're the reason my heart smiles.",
+      "With you, everything feels magical.",
+      "I’m so lucky to have you.",
+      "You are my happy place.",
+      "Forever isn’t long enough with you.",
+      "You’re the best thing that’s ever been mine."
+    ];
+
+    function generateMessage() {
+      const randomIndex = Math.floor(Math.random() * messages.length);
+      const messageBox = document.getElementById("loveMessage");
+      messageBox.textContent = messages[randomIndex];
+    }
+  </script>
+
+</body>
+</html>
